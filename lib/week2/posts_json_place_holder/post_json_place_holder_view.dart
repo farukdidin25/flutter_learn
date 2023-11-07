@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/week2/core/component/card/post_card.dart';
 import 'package:flutter_learn/week2/posts_json_place_holder/post_json_place_holder_view_model.dart';
 
 class PostJsonPlaceHolderView extends PostJsonPlaceHolderViewModel {
@@ -18,13 +19,7 @@ class PostJsonPlaceHolderView extends PostJsonPlaceHolderViewModel {
   ListView buildListView() {
     return ListView.builder(
             itemCount: postItems?.length ?? 0,
-            itemBuilder: (context, index) => Card(
-                  child: ListTile(
-                    leading: CircleAvatar(
-                        child: Text(postItems?[index].id.toString() ?? "")),
-                        title: Text(postItems![index].title!),
-                  ),
-                ));
+            itemBuilder: (context, index) => PostCard(model: postItems![index]),);
   }
 
   AppBar buildAppBar(BuildContext context) => AppBar(

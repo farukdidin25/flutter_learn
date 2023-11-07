@@ -8,7 +8,7 @@ import 'package:flutter_learn/week2/posts_json_place_holder/service/place_holder
 abstract class PostJsonPlaceHolderViewModel extends State<PostJsonPlaceHolder>{
   bool isLoading = true;
   final PlaceHolderService placeHolderService = PlaceHolderService();
-  List<PostModel>? postItems;
+  List<PostModel?>? postItems;
 
   @override
   void initState() {
