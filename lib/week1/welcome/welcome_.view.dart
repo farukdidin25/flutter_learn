@@ -106,5 +106,5 @@ class WelcomeView extends StatelessWidget {
   }
 
 
-  Container buildContainerBottom() => Container(color: Colors.blue);
+  Container buildContainerBottom() => Container(color: Colors.pink);
 }
